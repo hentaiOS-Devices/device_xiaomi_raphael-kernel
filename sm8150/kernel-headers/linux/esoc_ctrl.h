@@ -56,6 +56,7 @@ enum esoc_evt {
   ESOC_CMD_ENG_OFF,
   ESOC_INVALID_STATE,
   ESOC_RETRY_PON_EVT,
+  ESOC_BOOT_STATE,
 };
 enum esoc_cmd {
   ESOC_PWR_ON = 1,
