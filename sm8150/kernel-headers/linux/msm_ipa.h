@@ -124,7 +124,7 @@
 #define IPA_WAN_MSG_IPv6_ADDR_GW_LEN 4
 #define IPA_MAX_NUM_HW_PATH_CLIENTS 16
 #define QMI_IPA_MAX_CLIENT_DST_PIPES 4
-#define IPA_MAX_NUM_MAC_FLT 5
+#define IPA_MAX_NUM_MAC_FLT 32
 #define IPA_MAX_FLT_RT_CNT_INDEX (128)
 #define IPA_FLT_RT_HW_COUNTER (120)
 #define IPA_FLT_RT_SW_COUNTER (IPA_MAX_FLT_RT_CNT_INDEX - IPA_FLT_RT_HW_COUNTER)
@@ -1050,7 +1050,7 @@ struct ipa_ioc_nat_pdn_entry {
 };
 struct ipa_ioc_vlan_iface_info {
   char name[IPA_RESOURCE_NAME_MAX];
-  uint8_t vlan_id;
+  uint16_t vlan_id;
 };
 enum ipa_l2tp_tunnel_type {
   IPA_L2TP_TUNNEL_IP = 1,
