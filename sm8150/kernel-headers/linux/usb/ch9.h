@@ -193,6 +193,7 @@ struct usb_config_descriptor {
 #define USB_CONFIG_ATT_SELFPOWER (1 << 6)
 #define USB_CONFIG_ATT_WAKEUP (1 << 5)
 #define USB_CONFIG_ATT_BATTERY (1 << 4)
+#define USB_MAX_STRING_LEN 126
 struct usb_string_descriptor {
   __u8 bLength;
   __u8 bDescriptorType;

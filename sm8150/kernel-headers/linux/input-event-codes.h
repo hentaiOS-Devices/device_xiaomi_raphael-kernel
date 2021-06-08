@@ -368,6 +368,7 @@
 #define BTN_WHEEL 0x150
 #define BTN_GEAR_DOWN 0x150
 #define BTN_GEAR_UP 0x151
+#define BTN_INFO 0x152
 #define KEY_OK 0x160
 #define KEY_SELECT 0x161
 #define KEY_GOTO 0x162
@@ -564,6 +565,7 @@
 #define KEY_UNMUTE 0x274
 #define KEY_FASTREVERSE 0x275
 #define KEY_SLOWREVERSE 0x276
+#define KEY_AI 0x2b1
 #define KEY_DATA 0x277
 #define KEY_ONSCREEN_KEYBOARD 0x278
 #define BTN_TRIGGER_HAPPY 0x2c0

@@ -20,7 +20,6 @@
 #define _LINUX_TASKSTATS_H
 #include <linux/types.h>
 #define TASKSTATS_VERSION 9
-#define TASKSTATS2_VERSION 2
 #define TS_COMM_LEN 32
 struct taskstats {
   __u16 version;
@@ -70,29 +69,10 @@ struct taskstats {
   __u64 thrashing_count;
   __u64 thrashing_delay_total;
 };
-struct taskstats2 {
-  __u16 version;
-  __s16 oom_score;
-  __u32 pid;
-  __u64 anon_rss;
-  __u64 file_rss;
-  __u64 swap_rss;
-  __u64 shmem_rss;
-  __u64 unreclaimable;
-  __u64 utime;
-  __u64 stime;
-  __u64 cutime;
-  __u64 cstime;
-  __u32 uid __attribute__((aligned(8)));
-  __u32 ppid;
-  char name[TS_COMM_LEN];
-  char state[TS_COMM_LEN];
-};
 enum {
   TASKSTATS_CMD_UNSPEC = 0,
   TASKSTATS_CMD_GET,
   TASKSTATS_CMD_NEW,
-  TASKSTATS2_CMD_GET,
   __TASKSTATS_CMD_MAX,
 };
 #define TASKSTATS_CMD_MAX (__TASKSTATS_CMD_MAX - 1)
@@ -104,7 +84,6 @@ enum {
   TASKSTATS_TYPE_AGGR_PID,
   TASKSTATS_TYPE_AGGR_TGID,
   TASKSTATS_TYPE_NULL,
-  TASKSTATS_TYPE_FOREACH,
   __TASKSTATS_TYPE_MAX,
 };
 #define TASKSTATS_TYPE_MAX (__TASKSTATS_TYPE_MAX - 1)
@@ -114,7 +93,6 @@ enum {
   TASKSTATS_CMD_ATTR_TGID,
   TASKSTATS_CMD_ATTR_REGISTER_CPUMASK,
   TASKSTATS_CMD_ATTR_DEREGISTER_CPUMASK,
-  TASKSTATS_CMD_ATTR_FOREACH,
   __TASKSTATS_CMD_ATTR_MAX,
 };
 #define TASKSTATS_CMD_ATTR_MAX (__TASKSTATS_CMD_ATTR_MAX - 1)

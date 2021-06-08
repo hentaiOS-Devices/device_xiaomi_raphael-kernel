@@ -94,6 +94,7 @@ struct fuse_file_lock {
 #define FUSE_PARALLEL_DIROPS (1 << 18)
 #define FUSE_HANDLE_KILLPRIV (1 << 19)
 #define FUSE_POSIX_ACL (1 << 20)
+#define FUSE_SHORTCIRCUIT (1 << 30)
 #define CUSE_UNRESTRICTED_IOCTL (1 << 0)
 #define FUSE_RELEASE_FLUSH (1 << 0)
 #define FUSE_RELEASE_FLOCK_UNLOCK (1 << 1)
